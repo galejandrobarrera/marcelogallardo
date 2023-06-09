@@ -1,0 +1,66 @@
+/* ID */
+
+
+body{
+    font-family: 'Nunito', sans-serif;
+    font-size: 62,5%;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.fondogris{
+    background-color:gainsboro
+}
+
+.fondobeige{
+    background-color: beige;
+
+}
+
+.fondorojo{
+    background-color: red;
+}
+
+ul{
+    list-style-type: none;
+    font-size: 1,5rem;
+    
+
+}
+
+h1{
+    font-size: 4rem;
+    font-style: italic;
+    text-align: center;
+}
+
+h3{
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Nunito', sans-serif;
+}
+
+footer{
+    font-weight: bold;
+    background-color: red;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.subrayado{
+    text-decoration: underline;
+
+}
+
+.tamanio{
+    font-size: 25px;
+}
+
+
+
+
