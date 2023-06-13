@@ -64,3 +64,15 @@ a{
 
 
 
+.galeria{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.galeria img{
+    width: 250px;
+    height: 250px;
+    justify-content: space-evenly;
+}
