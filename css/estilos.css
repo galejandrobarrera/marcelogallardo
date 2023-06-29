@@ -24,7 +24,13 @@ body{
 
 ul{
     list-style-type: none;
-    font-size: 1,5rem;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
     
 
 }
@@ -62,17 +68,286 @@ a{
 }
 
 
+/*-- GALERIA --*/
+
+.h1galeria{
+    display: flex;
+    font-size: 50px;  
+    margin: 0px;
+    font-weight: bold;
+    background-color: cadetblue
+}
+
 
 
 .galeria{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
+    background-color:lightskyblue;
 
 }
 
 .galeria img{
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     justify-content: space-evenly;
+}
+
+.listagaleria{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: aquamarine;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+
+    
+}
+
+.footerclas{
+    background-color: burlywood;
+}
+
+
+/* -- Responsive Index*/
+
+.bodyindex{    
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: 3;
+    grid-template-areas:
+    "header"
+    "main "
+    "footer"
+
+}
+
+
+.header__responsive{
+background-color: grey;
+grid-area: header;
+    
+}
+
+.main__responsive{
+    background-color: beige;
+    grid-area: main;
+
+
+}
+
+.footer__responsive{
+    background-color: red;
+    grid-area: footer;
+
+}
+
+/* Tamaño tablet - 768px */
+
+@media screen and (max-width: 768px){
+    .bodyindex{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas: 
+        "header"
+        "main footer";
+
+.header__responsive{
+    background-color: brown;
+}
+
+}
+
+}
+
+/*Tamaño celular - 320px - 420px - 480px (500px) */
+
+@media screen and (max-width: 500px){
+    .bodyindex{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 0.5fr);
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+
+    }
+
+    .header__responsive{
+        background-color: cadetblue;
+        grid-area: header;
+            
+        }
+        
+        .main__responsive{
+            background-color: blanchedalmond;
+            grid-area: main;
+        
+        
+        }
+        
+        .footer__responsive{
+            background-color: aquamarine;
+            grid-area: footer;
+        
+        }
+}
+
+/* Responsive Design
+
+Pasar de un tamaño de escritorio a un tamaño menor(celular)
+Mediaqueries con MAX-WIDTH.
+*/
+
+/*Mobile First
+
+Pasar de un tamaño menor (celular) al tamaño mayor escritorio.
+Mediaqueries con MIN-WIDTH.
+*/
+
+
+/*-- Responsive Info Personal --*/
+
+
+.body__infopersonal{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+
+}
+
+.header__infopersonal{
+    background-color: beige;
+
+}
+
+.header__infopersonal nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.header__infopersonal nav ul li{
+    list-style-type: none;
+    font-size: 20px;
+    padding: 0.5px;
+
+}
+
+.main_infopersonal{
+    background-color: cadetblue;
+    color: blanchedalmond;
+
+}
+
+.footer__infopersonal{
+    background-color: greenyellow;
+
+}
+
+/*Tamaño tablet (768px)*/
+
+@media screen and (min-width: 768px){
+    .body__infopersonal{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 0.5fr;
+        grid-template-areas:
+        "header main"
+        "footer footer";
+    }
+}
+
+.header__infopersonal{
+    grid-area: header;
+    background-color: lightcyan;
+}
+
+.main_infopersonal{
+    grid-area: main;
+    background-color: lightgreen;
+
+}
+
+.footer__infopersonal{
+    grid-area: footer;
+    background-color: lightcoral;
+}
+
+/*Tamaño escritorio (1024px*/
+
+.body__infopersonal{
+    grid-template-columns: repeat(3 ,1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "main header footer";
+}
+
+/* -- Carrera como jugador -- */
+
+
+.h1carreracomojugador{
+    background-color: rgb(218, 193, 131);
+    margin: 0px;
+}
+
+.imagenesinfopersonal img{
+    width: 300px;
+    height: 300px;
+
+}
+
+
+.ulcarreracomojugador{
+    background-color: rgb(160, 187, 111);
+    font-size: 30px;
+    margin: 0px;
+
+}
+
+.maincarreracomojugador{
+    background-color: rgb(139, 183, 183);
+
+}
+
+.footercarreracomojugador{
+    background-color: grey;
+    
+}
+
+
+/* --Carrera como DT -- */
+
+.negrita{
+    font-weight: bold;
+
+}
+
+
+/* -- Carrera como DT -- */
+
+.ultecnico{
+
+
+}
+
+
+.maintecnico img{
+    width: 300px;
+    height: 300px;
+}
+
+.maintecnico{
+    background-color: cornflowerblue;
+
+}
+
+.headertecnico{
+    background-color: burlywood;
+
 }
