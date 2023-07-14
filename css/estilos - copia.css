@@ -1,0 +1,830 @@
+/* ID */
+
+body{
+    font-family: 'Nunito', sans-serif;
+    font-size: 62,5%;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul{
+    list-style-type: none;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+h3{
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Nunito', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.subrayado{
+    text-decoration: underline;
+
+}
+
+
+/* Responsive Design
+
+Pasar de un tamaño de escritorio a un tamaño menor(celular)
+Mediaqueries con MAX-WIDTH.
+*/
+
+/*Mobile First
+
+Pasar de un tamaño menor (celular) al tamaño mayor escritorio.
+Mediaqueries con MIN-WIDTH.
+*/
+
+
+/* - RESPONSIVE INDEX - */
+
+.body__responsive{    
+    grid-template-rows: 3fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+.header__responsive{
+        grid-area: header;
+}
+
+.header__responsive nav ul{
+    background-color: cornflowerblue;
+    margin: 0px;
+}
+
+.main__responsive{
+    background-color: beige;
+    grid-area: main;
+    display: block;
+}
+
+.main__responsive h1{
+    font-size: 45px;
+    font-style: italic;
+    text-align: center;
+    background-color: rgb(218, 67, 67);
+}
+
+.main__responsive img{
+    width: 500px;
+    height: 500px;
+}
+
+.footer__responsive{
+    background-color: red;
+    grid-area: footer;
+}
+
+
+/* Tamaño tablet index - 768px */
+
+@media screen and (max-width: 768px){
+    .body__responsive{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        margin: 0;
+        padding: 0;
+}
+
+.header__responsive{
+    background-color: brown;
+    grid-area: header;
+}
+
+.header__responsive nav ul{
+    display: block;
+    text-align: center;
+    font-size: 25px;
+}
+
+.main__responsive{
+    grid-area: main;
+}
+
+.main__responsive h1{
+    font-size: 55px;
+    text-align: center;
+}
+.main__responsive h3{
+    font-size: 30px;
+}
+.main__responsive p{
+    font-size: 20px;
+}
+
+.main__responsive img{
+    width: 250px;
+    height: 250px;
+}
+
+.main__responsiveno{
+    display: none;
+}
+
+.footer__responsive{
+    grid-area: footer;
+}
+}
+
+
+/* TAMAÑO CELULAR - INDEX */
+
+@media screen and (max-width: 500px){
+    .body__responsive{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1);
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+    .header__responsive{
+        background-color: cadetblue;
+        grid-area: header;
+        overflow: hidden;
+}
+
+        .header__responsive nav ul{
+            display: block;
+            text-align: center;
+            font-size: 30px;
+}
+        
+        .main__responsive{
+            background-color: blanchedalmond;
+            grid-area: main;
+}
+        .main__responsive h1{
+            display: block;
+            text-align: center;
+            font-size: 45px;
+}
+
+        .main__responsive h3{
+            font-size: 30px;
+}
+
+        .main__responsive p{
+            font-size: 22px;
+}
+
+        .main__responsive img{
+            width: 250px;
+            height: 250px;
+}
+
+        .main__responsiveno{
+            display: none;
+}
+        .footer__responsive a{
+            grid-area: footer;
+            font-size: 15px;
+        }
+}
+
+/* - GALERIA RESPONSIVE - */
+
+.body__galeria{
+    grid-template-rows: 3fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+
+}
+
+.header__galeria{
+    grid-area: header;
+    background-color: cornflowerblue;
+
+}
+
+.header__galeria nav ul{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.main__galeria{
+    grid-area: main;
+    background-color: bisque;
+}
+
+.main__galeria h1{
+    font-size: 4rem;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+    background-color: cadetblue;
+    margin-top: 0px;
+    
+}
+
+.main__galeria img{
+    height: 300px;
+    width: 300px;
+}
+
+.footer__galeria{
+    grid-area: footer;
+    background-color: teal;
+}
+
+/* Galeria Tamaño tablet */
+
+@media screen and (max-width: 768px){
+
+    .body__galeria{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+}
+
+    .header__galeria{
+        grid-area: header;
+        background-color: darkgoldenrod;
+}
+
+.header__galeria nav ul{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+    .main__galeria{
+        grid-area: main;
+        background-color: dodgerblue;
+        display: block;
+    }
+
+.main__galeria h1{
+    font-size: 45px;
+}
+
+.main__galeria h3{
+    font-size: 45px;
+}
+
+.main__galeria img{
+    width: 250px;
+    height: 250px;
+}
+
+    .footer__galeria{
+        grid-area: footer;
+        background-color: cornsilk;
+
+    }
+    .footer__galeria a{
+        font-size: 25px;
+    }
+}
+
+/* Galeria Tamaño Celular */
+
+@media screen and (max-width: 500px){
+
+    .body__galeria{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1);
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+    .header__galeria{
+        grid-area: header;
+        background-color: crimson;
+        display: block;
+}
+
+.header__galeria nav ul{
+    text-align: left;
+    font-size: 20px;
+    padding-left: 0;
+    
+}
+
+    .main__galeria{
+        grid-area: main;
+        background-color: darksalmon;
+}
+
+.main__galeria h1{
+    text-align: left;
+    font-size: 30px;
+}
+
+.main__galeria h3{
+    font-size: 20px;
+}
+
+.main__galeria img{
+    width: 150px;
+    height: 150px;
+}
+
+    .footer__galeria{
+        grid-area: footer;
+        background-color: deepskyblue;
+}
+
+.footer__galeria a{
+    font-size: 15px;
+}
+}
+
+
+
+/* -- Carrera como jugador -- */
+
+.body__jugador{
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+
+}
+
+.header__jugador{
+    grid-area: header;
+
+}
+
+.header__jugador nav ul{
+    background-color: rgb(160, 187, 111);
+    font-size: 30px;
+    margin: 0px;
+}
+
+.main__jugador{
+    grid-area: main;
+    background-color: tomato;
+}
+
+.main__jugador h1{
+    background-color: rgb(218, 193, 131);
+    font-size: 4rem;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+
+}
+
+.main__jugador img{
+    width: 300px;
+    height: 300px;
+
+}
+
+.footer__jugador{
+    grid-area: footer;
+    background-color: firebrick;
+}
+
+
+/* Carrera como jugador tamaño Tablet */
+
+
+@media screen and (max-width: 768px){
+
+    .body__jugador{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+
+    }
+
+    .header__jugador{
+        grid-area: header;
+        background-color: dodgerblue;
+    }
+
+    .header__jugador nav ul{
+        display: block;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .main__jugador{
+        grid-area: main;
+        background-color: antiquewhite;
+        display: block;
+    }
+    .main__jugador h1{
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .main__jugador p{
+        font-size: 25px;
+    }
+
+    .main__jugador img{
+        width: 250px;
+        height: 250px;
+    }
+
+    .footer__jugador{
+        grid-area: footer;
+        background-color: darkseagreen;
+    }
+    
+    .footer__jugador a{
+        font-size: 25px;
+    }
+}
+
+/* Carrera como jugador tamaño Celular */
+
+@media screen and (max-width: 500px){
+
+    .body__jugador{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1);
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    }
+
+    .header__jugador{
+        grid-area: header;
+        background-color: goldenrod;
+    }
+
+    .main__jugador{
+        grid-area: main;
+    }
+
+    .main__jugador h1{
+        font-size: 45px;
+    }
+
+    .main__jugador p{
+        font-size: 22px;
+
+    }
+
+    .main__jugador img{
+        width: 240px;
+        height: 240px;
+}
+
+    .footer__jugador{
+        grid-area: footer;
+}
+
+}
+
+
+/* -- Carrera como Tecnico -- */
+
+
+.body__tecnico{
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+.header__tecnico{
+    grid-area: header;
+}
+
+.header__tecnico nav ul{
+    background-color: rgb(46, 144, 235);
+    font-size: 30px;
+    margin: 0px;
+
+}
+
+.main__tecnico{
+    grid-area: main;
+    background-color: tan;
+}
+
+.main__tecnico h1{
+    background-color: salmon;
+    font-size: 45px;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.main__tecnico h3{
+    font-size: 20px;
+}
+
+.main__tecnico img{
+    width: 300px;
+    height: 300px;
+}
+
+.footer__tecnico{
+    grid-area: footer;
+    background-color: teal;
+}
+
+
+/* Carrera como Tecnico - Tamaño tablet */
+
+@media screen and (max-width: 768px){
+    
+    .body__tecnico{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+}
+    
+    .header__tecnico{
+        grid-area: header;
+        background-color: lightblue;
+    }
+
+    .header__tecnico nav ul{
+        text-align: center;
+        font-size: 32px;
+        display: block;
+        background-color: lightsteelblue;
+        
+    }
+
+    .main__tecnico{
+        grid-area: main;
+        background-color: rosybrown;
+    }
+
+    .main__tecnico h1{
+        font-size: 50px;
+        background-color: dodgerblue;
+    }
+
+    .main__tecnico h3{
+        font-size: 25px;
+
+    }
+
+    .main__tecnico p{
+        font-size: 23px;
+    }
+
+    .main__tecnico img{
+        width: 370px;
+        height: 370px
+    }
+
+
+    .footer__tecnico{
+        grid-area: footer;
+        background-color: khaki;
+    }
+
+    .footer__tecnico a{
+        font-size: 25px;
+    }
+
+}
+
+/* Carrera como Tecnico - Tamaño celular - */
+
+@media screen and (max-width: 500px){
+    .body__tecnico{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1);
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    }
+
+    .header__tecnico{
+        grid-area: header;
+        background-color: rgb(231, 186, 72);
+}
+
+    .main__tecnico{
+        grid-area: main;
+        background-color:rgb(250, 177, 150);
+}
+
+.main__tecnico h1{
+    font-size: 35px;
+}
+
+.main__tecnico h3{
+    font-size: 25px;
+}
+
+.main__tecnico p{
+    font-size: 20px;
+}
+
+.main__tecnico img{
+    width: 230px;
+    height: 230px;
+}
+
+    .footer__tecnico{
+        grid-area: footer;
+        background-color: rgb(176, 189, 202);
+}
+
+.footer__tecnico a{
+    font-size: 20px;
+}
+
+
+}
+
+
+/* - Datos Personales - */
+
+.body__infopersonal{
+    grid-template-rows: 3fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+
+.header__infopersonal{
+    grid-area: header;
+    background-color: rgb(214, 209, 209);
+
+}
+
+.header__infopersonal nav ul{
+    display: flex;
+    font-size: 35px;
+    margin: 0px;
+
+}
+
+.main__infopersonal{
+    grid-area: main;
+    background-color: rgb(248, 248, 148);
+    margin: 0px;
+}
+
+.main__infopersonal h1{
+    background-color: rgb(250, 183, 161);
+    font-size: 4rem;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+
+}
+
+.footer__infopersonal{
+    grid-area: footer;
+    background-color: rgb(191, 248, 104);
+}
+
+/* Tamaño tablet datos personales */
+
+@media screen and (max-width: 768px){
+    .body__infopersonal{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    }
+    
+
+.header__infopersonal{
+    grid-area: header;
+    background-color: lightcyan;
+}
+
+.header__infopersonal nav ul{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+.main__infopersonal{
+    grid-area: main;
+    background-color: lightgreen;    
+}
+
+.main__infopersonal h1{
+    font-size: 45px;
+    font-weight: bold;
+
+}
+
+.main__infopersonal p{
+    font-size: 23px;
+}
+
+
+
+.main__infopersonal img{
+    width: 450px;
+    height: 450px;
+}
+
+
+.footer__infopersonal{
+    grid-area: footer;
+    background-color: lightcoral;
+}
+}
+
+
+/* Datos Personales - Tamaño celular - */
+
+@media screen and (max-width: 500px){
+    .body__infopersonal{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1);
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    }
+
+    .header__infopersonal{
+        grid-area: header;
+        background-color:darkgrey;
+    }
+
+    .header__infopersonal nav ul{
+        font-size: 26px;
+
+    }
+
+    .main__infopersonal{
+        grid-area: main;
+        background-color: indianred;
+    }
+
+    .main__infopersonal h1{ 
+        font-size: 40px;
+
+    }
+
+    .main__infopersonal p{
+        font-size: 20px;
+        font-weight: bold;
+
+    }
+
+    .footer__infopersonal{
+        grid-area: footer;
+        background-color: mediumseagreen;
+    }
+
+}
+
